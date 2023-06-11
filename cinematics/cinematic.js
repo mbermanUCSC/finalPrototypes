@@ -94,52 +94,43 @@ class info extends Phaser.Scene{
         
 
         let rect1 = this.add.rectangle(640, 210, 0, 10, 0xffffff);
-        
-        
+        let rect2 = this.add.rectangle(640, 510, 0, 10, 0xffffff);
+        let rect3 = this.add.rectangle(880, 930, 0, 10, 0xffffff);
 
+        const self = this;
 
-        //const showLines1 = 
         const showLines1 = this.tweens.add({
             targets: rect1,
             width: 130,
             duration: 2000,
-            ease: 'Linear'
-        });
-
-        //this.time.delayedCall(500, () => showLines1.play);
-
-        let rect2 = this.add.rectangle(640, 510, 0, 10, 0xffffff);
-
-        //this.time.delayedCall(5000, () => 
-        const showLines2 = this.tweens.add({
-            targets: rect2,
-            width: 635,
-            duration: 2500,
             ease: 'Linear',
-            delay: 5000
+            onComplete: function () {
+                const showLines2 = self.tweens.add({
+                    targets: rect2,
+                    width: 635,
+                    duration: 2500,
+                    ease: 'Linear',
+                    delay: 3000,
+                    onComplete: function() {
+                        const showLines3 = self.tweens.add({
+                            targets: rect3,
+                            width: 165,
+                            duration: 1000,
+                            ease: 'Linear',
+                            delay: 5000
+                        });
+                    }
+                });
+            },
+            callbackScope: this
         });
-
-        let rect3 = this.add.rectangle(880, 930, 0, 10, 0xffffff);
-
-        
-        //this.time.delayedCall(11000, () => 
-        const showLines3 = this.tweens.add({
-            targets: rect3,
-            width: 165,
-            duration: 1000,
-            ease: 'Linear',
-            delay: 11000
-        });
-
-        showLines1.chain(showLines2, showLines3);
-
 
         this.input.on('pointerdown', () => {            
             const fadeOut = this.tweens.add({
                 targets: cover,
                 alpha: 0,
-                delay: 500, // Delay before starting the fade out effect (in milliseconds)
-                duration: 1000, // Duration of the fade out effect (in milliseconds)
+                delay: 500, 
+                duration: 1000, 
                 ease: 'Linear',
             });
             rect1.destroy();

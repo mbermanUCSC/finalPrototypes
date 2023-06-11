@@ -8,9 +8,10 @@ the menu with interactive and non interactive components, and a non interactive 
     Ending: the end of our cinematic is the fade out from the scene.
 
 **Interactive cinematic:**  
-    visually alive:
+ - Visually alive:
         Not touching: the cinematic is visually alive when not being touched by sliding the items into view. And then having the title on the top swing back and forth almost like a lamp hanging from the roof.
-        touching: the cinematic is alive when interacted with as the play button will tween when moused over and is interactable in order to go to the next screen.
+ - Responsive:
+        Touching: the cinematic is alive when interacted with as the play button will tween when moused over and is interactable in order to go to the next screen.
 
 
 **Choreography in code:**  

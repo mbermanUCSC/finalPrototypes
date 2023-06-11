@@ -16,8 +16,18 @@ class menu extends Phaser.Scene{
 
             // this.playText = this.add.text(this.sys.game.config.width / 2, this.sys.game.config.height - 150, 'START', { font: 'bold 50px Arial', fill: '#ffffff' });
             // this.playText.setOrigin(0.5, 0.5);
-        this.playText = this.add.image(990, 875, 'start').setScale(.8);
-        let title = this.add.image(920 , 150, 'title');
+        this.playText = this.add.image(990, 2000, 'start').setScale(.8);//875
+        let title = this.add.image(920 , -200, 'title');//150
+    
+    
+        const slideDownTitle = this.tweens.add({
+            targets: title,
+            y : 150,
+            duration: 800,
+            ease: 'Cosine.easeInOut'
+        });
+    
+        slideDownTitle.play();
 
 
         const wiggleTween = this.tweens.add({
@@ -31,14 +41,23 @@ class menu extends Phaser.Scene{
         
         wiggleTween.play();
 
+        const slideDownStart = this.tweens.add({
+            targets: this.playText,
+            y : 875,
+            duration: 2000,
+            ease: 'Sine.easeInOut'
+        });
+    
+        slideDownStart.play();
+
 
         this.playText.setInteractive();
             
         this.playText.on('pointerdown', function() {
             this.titleScreen.destroy();
             this.playText.destroy();
-            this.title.destroy();
-
+            title.destroy();
+            this.time.delayedCall(1500, () => this.scene.start('info'));
         }, this);
 
         this.playText.on('pointerover', function () {
@@ -74,6 +93,47 @@ class info extends Phaser.Scene{
 
         
 
+        let rect1 = this.add.rectangle(640, 210, 0, 10, 0xffffff);
+        
+        
+
+
+        //const showLines1 = 
+        const showLines1 = this.tweens.add({
+            targets: rect1,
+            width: 130,
+            duration: 2000,
+            ease: 'Linear'
+        });
+
+        //this.time.delayedCall(500, () => showLines1.play);
+
+        let rect2 = this.add.rectangle(640, 510, 0, 10, 0xffffff);
+
+        //this.time.delayedCall(5000, () => 
+        const showLines2 = this.tweens.add({
+            targets: rect2,
+            width: 635,
+            duration: 2500,
+            ease: 'Linear',
+            delay: 5000
+        });
+
+        let rect3 = this.add.rectangle(880, 930, 0, 10, 0xffffff);
+
+        
+        //this.time.delayedCall(11000, () => 
+        const showLines3 = this.tweens.add({
+            targets: rect3,
+            width: 165,
+            duration: 1000,
+            ease: 'Linear',
+            delay: 11000
+        });
+
+        showLines1.chain(showLines2, showLines3);
+
+
         this.input.on('pointerdown', () => {            
             const fadeOut = this.tweens.add({
                 targets: cover,
@@ -82,6 +142,9 @@ class info extends Phaser.Scene{
                 duration: 1000, // Duration of the fade out effect (in milliseconds)
                 ease: 'Linear',
             });
+            rect1.destroy();
+            rect2.destroy();
+            rect3.destroy();
             this.time.delayedCall(1500, () => fadeOut.play);
             this.time.delayedCall(1500, () => this.scene.start('menu'));
         });
@@ -96,6 +159,6 @@ const game = new Phaser.Game({
         height: 1080
     },
     backgroundColor: '#0000000', 
-    scene: [info, menu],
+    scene: [menu, info],
     title: "Cinematics",
 });

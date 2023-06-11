@@ -4,9 +4,11 @@ A demonstration of different scenes from 'The Report' including
 **Audio:**
 - Continuously looping background sound: our game and prototype will show off two separate looping sounds. One is played when the player is being chased, the other is played when the player is wondering around or is in a safe area.  
 - Sound effects: we have sounds effects for a wide variety of inputs from the player consisting of, opening and closing closets, writing to the desk, opening and closing file cabinet, walking around, heartbeat when hiding, door creak for monster entering room, and picking up an item  
-- Visual: image-based assets: we have a sprite sheet for the player animations in order to have seemless movement. We also have multiple sprite sheets for the player and monster dialogue in order for multiple emotions.
+  
+ ** Visual:**   
+ - image-based assets: we have a sprite sheet for the player animations in order to have seemless movement. We also have multiple sprite sheets for the player and monster dialogue in order for multiple emotions.
 
-    A shader based visual effect: we have multiple shader implementations. Firstly we have the background and walls change color whenever the player is hiding in order to give the perspective of being inside a dark closet. Secondly when we interact with the desk the background becomes grayscaled and the game is paused. Finally the file cabinet and the item both display an item and when these are displayed the background is gray scaled and paused as well.
+ - A shader based visual effect: we have multiple shader implementations. Firstly we have the background and walls change color whenever the player is hiding in order to give the perspective of being inside a dark closet. Secondly when we interact with the desk the background becomes grayscaled and the game is paused. Finally the file cabinet and the item both display an item and when these are displayed the background is gray scaled and paused as well.
 
 Motion:
     For motion we allow our character to have 4 directions they are able to move around in based on physics movement. These motions are matched with an animation to help the player feel like they are moving from one point to another.

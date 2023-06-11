@@ -1,11 +1,11 @@
 A demonstration of a cinematic experience from 'The Report' including
 the menu with interactive and non interactive components, and a non interactive scene with a beginning middle and an end.
 
-**Non-Interactive cinematic:**  
-    The piece we chose for the non-interactive cinematic was our introduction to the characters in the story as it really examplifies what our game is about in a clear and concise manor.  
-    - Beginning: the beginning of our cinematic is the fade in for the whole scene.
-    - Middle: the middle of our cinematic is the underlining of the important pieces in the writing, as well as the sound effect being played.
-    - Ending: the end of our cinematic is the fade out from the scene.
+**Non-Interactive cinematic:**    
+The piece we chose for the non-interactive cinematic was our introduction to the characters in the story as it really examplifies what our game is about in a clear and concise manor.    
+- Beginning: the beginning of our cinematic is the fade in for the whole scene.  
+- Middle: the middle of our cinematic is the underlining of the important pieces in the writing, as well as the sound effect being played.  
+- Ending: the end of our cinematic is the fade out from the scene.  
 
 **Interactive cinematic:**  
  - Visually alive (Not Touching):

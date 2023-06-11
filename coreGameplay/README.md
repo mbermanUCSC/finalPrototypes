@@ -1,10 +1,9 @@
 # Core Gameplay
 A demonstration of different scenes from 'The Report' including  
 
-Audio:
-    Continuously looping background sound: our game and prototype will show off two separate looping sounds. One is played when the player is being chased, the other is played when the player is wondering around or is in a safe area.
-
-    Sound effects: we have sounds effects for a wide variety of inputs from the player consisting of, opening and closing closets, writing to the desk, opening and closing file cabinet, walking around, heartbeat when hiding, door creak for monster entering room, and picking up an item
+**Audio:**
+- Continuously looping background sound: our game and prototype will show off two separate looping sounds. One is played when the player is being chased, the other is played when the player is wondering around or is in a safe area.  
+- Sound effects: we have sounds effects for a wide variety of inputs from the player consisting of, opening and closing closets, writing to the desk, opening and closing file cabinet, walking around, heartbeat when hiding, door creak for monster entering room, and picking up an item
 
 Visual:
     image-based assets: we have a sprite sheet for the player animations in order to have seemless movement. We also have multiple sprite sheets for the player and monster dialogue in order for multiple emotions.

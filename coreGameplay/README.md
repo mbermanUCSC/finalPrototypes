@@ -1,4 +1,5 @@
-# Core Gameplay
+# Core Gameplay Prototype  
+Play demo [here](https://mbermanucsc.github.io/finalPrototypes/coreGameplay/)  
 A demonstration of different scenes from 'The Report' including  
 
 **Audio:**

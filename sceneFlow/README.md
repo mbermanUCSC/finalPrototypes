@@ -1,4 +1,4 @@
-# SceneFlowPrototype  
+# Scene Flow Prototype  
 Play demo [here](https://mbermanucsc.github.io/finalPrototypes/sceneFlow/)        
 A demonstration of different scenes from 'The Report' including  
 gameplay, loading scene, title scene, introduction, settings (mobile or computer), credits, and different endings.  

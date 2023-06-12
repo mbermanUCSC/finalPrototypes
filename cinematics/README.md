@@ -1,5 +1,5 @@
 # Cinematics Prototype
-Play demo [here](https://mbermanucsc.github.io/finalPrototypes/cinematics/)  
+Play demo [here](https://mbermanucsc.github.io/finalPrototypes/cinematics/)    
 A demonstration of a cinematic experience from 'The Report' including
 the menu with interactive and non interactive components, and a non interactive scene with a beginning middle and an end.
 
